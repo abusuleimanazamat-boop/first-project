@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   padding-top: 80px;
   width: 1110px;
-  background-image: url(img/background_dandelios.png);
+  background-image: url("img/background_dandelios.png");
   background-repeat: no-repeat;
   background-position: 20px 0px;
 }
