@@ -13,16 +13,18 @@ body {
 .container {
   margin: 0 auto;
   padding-top: 80px;
-  width: 1110px;
+  max-width: 1110px;
+  background-size: 790px 697px;
   background-image: url("img/background_dandelios.png");
   background-repeat: no-repeat;
-  background-position: 20px 0px;
+  background-position: 5px 0px;
 }
 
-.title {
+.page-title {
   font-weight: 400;
   font-size: 70px;
   text-align: center;
+  margin-top: 220px;
   margin-bottom: 110px;
   line-height: 78px;
 }
@@ -32,7 +34,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 45px;
 }
 
 .product-card {
@@ -52,24 +54,23 @@ body {
 }
 
 .product-card__title {
-  padding-bottom: 5px;
+  margin-bottom: 5px;
   font-size: 20px;
   line-height: 27px;
 }
 
 .product-card__description {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   line-height: 18px;
 }
 
 .product-card__ingredients-title {
-  padding-bottom: 5px;
+  margin-bottom: 5px;
   line-height: 18px;
 }
 
 .product-card__ingredients {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
   padding-left: 15px;
   line-height: 18px;
 }
@@ -78,7 +79,7 @@ body {
   margin-bottom: 5px;
 }
 
-.price-text {
+.product-card__price-wrapper {
   display: flex;
   justify-content: space-between;
 }
