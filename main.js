@@ -9,7 +9,7 @@ const outputConsoleLogBtn = document.getElementById('output-console-log-btn');
 const changeColorBtn = document.getElementById('change-color-btn');
 
 changeCardColorBtn.addEventListener('click', () => {
-  productCard.style.backgroundColor = redColorHash;
+productCard.style.backgroundColor = redColorHash;
 });
   
 changeAllCardsColorBtn.addEventListener('click', () => {
@@ -24,10 +24,10 @@ if (question) {window.open("https://google.com")}
 
 outputConsoleLogBtn.addEventListener('click', () => outputConsoleLog('ДЗ №6'))
 function outputConsoleLog(message) {
-  alert(message)
-  console.log(message)
+alert(message)
+console.log(message)
 }
 
 changeColorBtn.addEventListener('click', () => {
-    changeColorBtn.classList.toggle('active');
+changeColorBtn.classList.toggle('active');
 });
