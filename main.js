@@ -9,25 +9,27 @@ const outputConsoleLogBtn = document.getElementById('output-console-log-btn');
 const changeColorBtn = document.getElementById('change-color-btn');
 
 changeCardColorBtn.addEventListener('click', () => {
-productCard.style.backgroundColor = redColorHash;
+  productCard.style.backgroundColor = redColorHash;
 });
   
 changeAllCardsColorBtn.addEventListener('click', () => {
-productCards.forEach(card => card.style.backgroundColor = greenColorHash)
+  productCards.forEach(card => card.style.backgroundColor = greenColorHash)
 });
 
 openGoogleBtn.addEventListener('click', () => openGooglePage());
 function openGooglePage() {
-const question = confirm("Вы действительно хотите перейти на Google ?")
-if (question) {window.open("https://google.com")}
-}
+  const question = confirm("Вы действительно хотите перейти на Google ?")
+  if (question) {
+    window.open("https://google.com")
+  }
+};
 
-outputConsoleLogBtn.addEventListener('click', () => outputConsoleLog('ДЗ №6'))
+outputConsoleLogBtn.addEventListener('click', () => outputConsoleLog('ДЗ №6'));
 function outputConsoleLog(message) {
-alert(message)
-console.log(message)
-}
+  alert(message)
+  console.log(message)
+};
 
 changeColorBtn.addEventListener('click', () => {
-changeColorBtn.classList.toggle('active');
+  changeColorBtn.classList.toggle('active');
 });
