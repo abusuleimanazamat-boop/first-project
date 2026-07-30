@@ -1,6 +1,6 @@
 function showTemperature(city, temperature) {
   console.log(`Сейчас в ${city} температура - ${temperature} градусов по Цельсию`)
-};
+}
 showTemperature('Иваново', 21);
 
 const LIGHT_SPEED =  299792458;
@@ -12,7 +12,7 @@ function checkSpeed(speed) {
   } else {
    console.log('Субсветовая скорость');
   }
-};
+}
 checkSpeed(299792458);
 
 let product = "Iphone";
@@ -25,5 +25,5 @@ function checkPrice(balance) {
     const difference = price - balance;
     console.log(`Вам не хватает ${difference}$, пополните баланс`);
   }
-};
+}
 checkPrice(90);
