@@ -5,7 +5,7 @@ import { users } from "./comment.js";
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newNumbers = numbers.filter(number => {
   return number >= 5;
-})
+});
 console.log(newNumbers);
 
 const furniture = [
@@ -14,12 +14,12 @@ const furniture = [
   'bookcase',
   'bed',
 ];
-const result = furniture.find(item => item === 'table');
-console.log(result);
+const hasItemFurniture = furniture.find(item => item === 'table');
+console.log(hasItemFurniture);
 
 function reverseArray(array) {
  array.reverse()
-}
+};
 reverseArray(furniture);
 reverseArray(numbers);
 console.log(furniture);
@@ -30,21 +30,18 @@ const usersWithPostId = users.map(user => ({
   ...user,
   postId: user.id <= 5 ? 2 : 1
 }));
-console.log(usersWithPostId)
+console.log(usersWithPostId);
 
 const newUsers = users.filter(user => user.email.includes('com'));
 console.log(newUsers);
 
-function addIsInvalid(users) {
- return users.map((user) => {
-    return {
-      ...user,
-      isInvalid: user.body > 180 ? true  : false  ,
-    }
-  })
+function getIsInvalid(users) {
+ return users.map((user) => ({
+  ...user,
+  isInvalid: user.body.length > 180 }));
 };
-console.log(addIsInvalid(users))
-
+console.log(getIsInvalid(users));
+    
 const usersWithIdAndName = users.map(user =>({
   "id": user.id ,
   "name": user.name,
