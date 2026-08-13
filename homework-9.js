@@ -37,8 +37,9 @@ console.log(newUsers);
 
 function getIsInvalid(users) {
  return users.map((user) => ({
-  ...user,
-  isInvalid: user.body.length > 180 }));
+    ...user,
+    isInvalid: user.body.length > 180 
+  }));
 };
 console.log(getIsInvalid(users));
     
