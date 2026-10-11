@@ -180,10 +180,10 @@ body {
 }
 
 .footer-copyright {
-font-family: 'Montserrat',sans-serif;
-display: flex;
-justify-content: space-around;
-color: #FFFFFF
+  font-family: 'Montserrat',sans-serif;
+  display: flex;
+  justify-content: space-around;
+  color: #FFFFFF
 }
 
 .modal {
@@ -192,7 +192,6 @@ color: #FFFFFF
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 500px;
   padding: 30px;
   background: white;
