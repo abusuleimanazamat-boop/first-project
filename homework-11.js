@@ -1,11 +1,10 @@
 const emailForm = document.querySelector('#email-form')
-emailForm.addEventListener('submit',(event) => {
-event.preventDefault();
-
-const email = emailForm.querySelector('[name="email"]').value;
-console.log({
-  email: email
-});
+  emailForm.addEventListener('submit',(event) => {
+  event.preventDefault();
+  const email = emailForm.querySelector('[name="email"]').value;
+  console.log({
+    email: email
+  });
 });
 
 const modalOpenBtn = document.querySelector('.rgn-btn');
