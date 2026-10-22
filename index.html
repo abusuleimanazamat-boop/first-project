@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +15,19 @@
 
       <h1 class="page-title">Выбери свой продукт</h1>
 
+      
+
       <button id="change-card-color-btn">Сменить цвет карточки</button>
       <button id="change-all-cards-color-btn"> Cменить цвет карточек</button>
       <button id="open-Google-btn">Открыть Google</button>
       <button id="output-console-log-btn">Вывести сообщение в консоль лог</button>
       <button id="change-color-btn">Сменить цвет кнопки</button>
+      <button class="rgn-btn">Регистрация</button>
       
       <ul id="products">
         <template id="product-card-template">  
           <li class="product-card">
-            <img class="product-card__image" src="" alt="" width="290"/>
+            <img class="product-card__image"/>
             <p class="product-card__skin-type"></p>
             <h2 class="product-card__title"></h2>
             <p class="product-card__description"></p>
@@ -49,5 +52,75 @@
     <script src="homework-8.js"></script>
     <script type="module" src="homework-9.js"></script>
     <script type="module" src="homework-10.js"></script>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <p class="footer-title">Product Cards</p>
+            <p class="footer-text">У нас самые лучшие продукты для кожи!</p>
+            <div class="footer-socials">
+              <a href="#">
+                <img class="socials__icons" src="./img/tg@1x.png" alt="Telegram">
+              </a>
+              <a href="#">
+                <img class="socials__icons" src="./img/vk@1x.png" alt="Вконтакте">
+              </a>
+            </div>
+         </div>
+
+          <div class="footer-subscribe">
+            <p class="footer-subscribe__text">Подпишись на наши акции:</p>
+            <form id="email-form">
+              <div class="form-wrapper">
+                <input class="form-wrapper__input" name="email" type="email" required placeholder="Введите Email...">
+                <span class="footer-subscribe__divider"></span>
+                <button class="form-wrapper__button" type="submit" >Подписаться</button>
+              </div>
+            </form>
+          </div>
+          
+          <nav class="footer-navigation">
+            <p class="footer__links-title">Быстрые ссылки </p>
+            <a class="footer__link" href="#">Главная</a>
+            <a class="footer__link" href="#">Магазин</a>
+            <a class="footer__link" href="#">Контакты</a>
+          </nav>
+
+        </div>
+        <p class="footer-copyright">www.product-cards.com©all right reserve</p>
+       
+      </footer>
+
+      <div class="overlay"></div>
+
+      <div class="modal">
+        <form id="registration-form" novalidate>
+
+          <label>Имя
+            <input id="name" name="name" type="text" required placeholder="Введите ваше имя...">
+          </label>
+          <label>Фамилия
+            <input id="surname" name="surname" type="text" required placeholder="Введите вашу фамилию...">
+          </label>
+          <label>Дата рождения
+            <input id="birth-date" name="birthDate" type="date" required >
+          </label>
+          <label>Логин
+            <input id="login" name="login" type="text" required placeholder="Введите логин...">
+          </label>
+          <label>Пароль
+            <input id="password" name="password" type="password" required placeholder="Пароль...">
+          </label>
+          <label>Повтор пароля
+            <input id="repeat-password" name="repeatPassword" type="password" required placeholder="Повтор пароля...">
+          </label>
+          <button type="submit">Зарегистрироваться</button>
+          
+        </form>
+
+        <button class="modal-close">x</button>
+
+      </div>
+    <script src="homework-11.js"></script>
   </body>
 </html>
