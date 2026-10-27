@@ -1,3 +1,4 @@
+import Form from "./form.js";
 const emailForm = document.querySelector("#email-form");
 emailForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -11,7 +12,8 @@ const modalOpenBtn = document.querySelector(".rgn-btn");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const modalCloseBtn = document.querySelector(".modal-close");
-const registrationForm = document.getElementById("registration-form");
+const rgnForm = document.getElementById("registration-form");
+const registrationForm = new Form('registration-form')
 const passwordInput = document.getElementById("password");
 const repeatPasswordInput = document.getElementById("repeat-password");
 let newUser;
@@ -26,10 +28,10 @@ modalCloseBtn.addEventListener("click", () => {
   overlay.classList.remove("overlay-showed");
 });
 
-registrationForm.addEventListener("submit", (event) => {
+rgnForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (!registrationForm.checkValidity()) {
+  if (!registrationForm.validate()) {
     alert("Заполните все обязательные поля");
     return;
   }
@@ -37,14 +39,12 @@ registrationForm.addEventListener("submit", (event) => {
     alert("Пароли не совпадают");
     return;
   }
-  const formData = new FormData(registrationForm);
-  const formObject = Object.fromEntries(formData);
-  console.log(formObject);
-  console.log(formData);
 
+  const formObject = registrationForm.getValues();
+  console.log(formObject);
   newUser = formObject;
   newUser.createdOn = new Date();
-  console.log(newUser);
+  registrationForm.reset();
   modal.classList.remove("modal-showed");
   overlay.classList.remove("overlay-showed");
 });
