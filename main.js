@@ -1,3 +1,22 @@
+import './product-cards.js';
+import './comment.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import './homework-10.js';
+import './homework-11.js';
+import './homework-12.js';
+import Modal from './modal.js';
+import Form from './form.js';
+
+const registrationModal = new Modal ('registration-modal');
+
+const registrationBtn = document.querySelector('.rgn-btn');
+registrationBtn.addEventListener('click', () => {
+  registrationModal.open()
+});
+const registrationForm = new Form('registration-form');
+console.log(registrationForm.validate());
 const productCard = document.querySelector('.product-card');
 const changeCardColorBtn = document.getElementById('change-card-color-btn');
 const redColorHash = '#dd1111';
