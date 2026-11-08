@@ -1,37 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="container">
-
       <h1 class="page-title">Выбери свой продукт</h1>
 
-      
-
       <button id="change-card-color-btn">Сменить цвет карточки</button>
-      <button id="change-all-cards-color-btn"> Cменить цвет карточек</button>
+      <button id="change-all-cards-color-btn">Cменить цвет карточек</button>
       <button id="open-Google-btn">Открыть Google</button>
-      <button id="output-console-log-btn">Вывести сообщение в консоль лог</button>
+      <button id="output-console-log-btn">
+        Вывести сообщение в консоль лог
+      </button>
       <button id="change-color-btn">Сменить цвет кнопки</button>
       <button class="rgn-btn">Регистрация</button>
-      
+
       <ul id="products">
-        <template id="product-card-template">  
+        <template id="product-card-template">
           <li class="product-card">
-            <img class="product-card__image"/>
+            <img class="product-card__image" />
             <p class="product-card__skin-type"></p>
             <h2 class="product-card__title"></h2>
             <p class="product-card__description"></p>
-            
+
             <p class="product-card__ingredients-title">Состав</p>
 
             <ul class="product-card__ingredients"></ul>
@@ -40,87 +42,126 @@
               <p class="product-card__price-title">Цена</p>
               <p class="product-card__price"></p>
             </div>
-            
           </li>
-
         </template>
-
       </ul>
     </div>
     <script type="module" src="main.js"></script>
-    <!-- <script src="homework-7.js"></script>
-    <script src="homework-8.js"></script>
-    <script type="module" src="homework-9.js"></script>
-    <script type="module" src="homework-10.js"></script> -->
 
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-brand">
-            <p class="footer-title">Product Cards</p>
-            <p class="footer-text">У нас самые лучшие продукты для кожи!</p>
-            <div class="footer-socials">
-              <a href="#">
-                <img class="socials__icons" src="./img/tg@1x.png" alt="Telegram">
-              </a>
-              <a href="#">
-                <img class="socials__icons" src="./img/vk@1x.png" alt="Вконтакте">
-              </a>
-            </div>
-         </div>
-
-          <div class="footer-subscribe">
-            <p class="footer-subscribe__text">Подпишись на наши акции:</p>
-            <form id="email-form">
-              <div class="form-wrapper">
-                <input class="form-wrapper__input" name="email" type="email" required placeholder="Введите Email...">
-                <span class="footer-subscribe__divider"></span>
-                <button class="form-wrapper__button" type="submit" >Подписаться</button>
-              </div>
-            </form>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <p class="footer-title">Product Cards</p>
+          <p class="footer-text">У нас самые лучшие продукты для кожи!</p>
+          <div class="footer-socials">
+            <a href="#">
+              <img
+                class="socials__icons"
+                src="./img/tg@1x.png"
+                alt="Telegram"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="socials__icons"
+                src="./img/vk@1x.png"
+                alt="Вконтакте"
+              />
+            </a>
           </div>
-          
-          <nav class="footer-navigation">
-            <p class="footer__links-title">Быстрые ссылки </p>
-            <a class="footer__link" href="#">Главная</a>
-            <a class="footer__link" href="#">Магазин</a>
-            <a class="footer__link" href="#">Контакты</a>
-          </nav>
-
         </div>
-        <p class="footer-copyright">www.product-cards.com©all right reserve</p>
-       
-      </footer>
 
-      <div class="overlay"></div>
+        <div class="footer-subscribe">
+          <p class="footer-subscribe__text">Подпишись на наши акции:</p>
+          <form id="email-form">
+            <div class="form-wrapper">
+              <input
+                class="form-wrapper__input"
+                name="email"
+                type="email"
+                required
+                placeholder="Введите Email..."
+              />
+              <span class="footer-subscribe__divider"></span>
+              <button class="form-wrapper__button" type="submit">
+                Подписаться
+              </button>
+            </div>
+          </form>
+        </div>
 
-      <div id="registration-modal" class="modal">
-        <form id="registration-form" novalidate>
-
-          <label>Имя
-            <input id="name" name="name" type="text" required placeholder="Введите ваше имя...">
-          </label>
-          <label>Фамилия
-            <input id="surname" name="surname" type="text" required placeholder="Введите вашу фамилию...">
-          </label>
-          <label>Дата рождения
-            <input id="birth-date" name="birthDate" type="date" required >
-          </label>
-          <label>Логин
-            <input id="login" name="login" type="text" required placeholder="Введите логин...">
-          </label>
-          <label>Пароль
-            <input id="password" name="password" type="password" required placeholder="Пароль...">
-          </label>
-          <label>Повтор пароля
-            <input id="repeat-password" name="repeatPassword" type="password" required placeholder="Повтор пароля...">
-          </label>
-          <button type="submit">Зарегистрироваться</button>
-          
-        </form>
-
-        <button class="modal-close">x</button>
-
+        <nav class="footer-navigation">
+          <p class="footer__links-title">Быстрые ссылки</p>
+          <a class="footer__link" href="#">Главная</a>
+          <a class="footer__link" href="#">Магазин</a>
+          <a class="footer__link" href="#">Контакты</a>
+        </nav>
       </div>
-    <!-- <script src="homework-11.js"></script> -->
+      <p class="footer-copyright">www.product-cards.com©all right reserve</p>
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div id="registration-modal" class="modal">
+      <form id="registration-form" novalidate>
+        <label
+          >Имя
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder="Введите ваше имя..."
+          />
+        </label>
+        <label
+          >Фамилия
+          <input
+            id="surname"
+            name="surname"
+            type="text"
+            required
+            placeholder="Введите вашу фамилию..."
+          />
+        </label>
+        <label
+          >Дата рождения
+          <input id="birth-date" name="birthDate" type="date" required />
+        </label>
+        <label
+          >Логин
+          <input
+            id="login"
+            name="login"
+            type="text"
+            required
+            placeholder="Введите логин..."
+          />
+        </label>
+        <label
+          >Пароль
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            placeholder="Пароль..."
+          />
+        </label>
+        <label
+          >Повтор пароля
+          <input
+            id="repeat-password"
+            name="repeatPassword"
+            type="password"
+            required
+            placeholder="Повтор пароля..."
+          />
+        </label>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+
+      <button class="modal-close">x</button>
+    </div>
   </body>
 </html>
