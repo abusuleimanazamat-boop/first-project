@@ -18,16 +18,6 @@ const passwordInput = document.getElementById("password");
 const repeatPasswordInput = document.getElementById("repeat-password");
 let newUser;
 
-modalOpenBtn.addEventListener("click", () => {
-  modal.classList.add("modal-showed");
-  overlay.classList.add("overlay-showed");
-});
-
-modalCloseBtn.addEventListener("click", () => {
-  modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
-});
-
 rgnForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -41,7 +31,6 @@ rgnForm.addEventListener("submit", (event) => {
   }
 
   const formObject = registrationForm.getValues();
-  console.log(formObject);
   newUser = formObject;
   newUser.createdOn = new Date();
   registrationForm.reset();

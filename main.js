@@ -7,17 +7,14 @@ import './homework-10.js';
 import './homework-11.js';
 import './homework-12.js';
 import './homework-13.js';
-import Modal from './modal.js';
+import Modal from './homework-14.js'
 import Form from './form.js';
 
-const registrationModal = new Modal ('registration-modal');
-
-const registrationBtn = document.querySelector('.rgn-btn');
-registrationBtn.addEventListener('click', () => {
-  registrationModal.open()
-});
+const registrationModal = new Modal ('registration-modal', 'registration-btn', true);
+const authModal = new Modal ('auth-modal', 'auth-btn', false);
 const registrationForm = new Form('registration-form');
-console.log(registrationForm.validate());
+const authForm = new Form('auth-form');
+
 const productCard = document.querySelector('.product-card');
 const changeCardColorBtn = document.getElementById('change-card-color-btn');
 const redColorHash = '#dd1111';
