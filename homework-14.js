@@ -3,8 +3,19 @@ export default class Modal {
     this.modal = document.getElementById(id)
     this.openBtn = document.getElementById(buttonId)
     this.overlay = document.getElementById('overlay')
+    this.shouldCloseOverlay = shouldCloseOverlay
+    this.closeButton = this.modal.querySelector('.modal-close');
+    this.handleCloseClick = () =>{
+      this.close();
+    }
+    
+    this.handleOverlayClick = () => {
+      if(this.isOpen()) {
+        this.close();
+      }
+    }
+
     this.#initOpen(buttonId)
-    this.#initClose(shouldCloseOverlay)
   }
 
   #initOpen(buttonId) {
@@ -14,24 +25,14 @@ export default class Modal {
     })
   }
 
-  #initClose(shouldCloseOverlay) {
-    const closeButton = this.modal.querySelector('.modal-close')
+  #initClose() {
+  
+    this.closeButton.addEventListener('click', this.handleCloseClick);
 
-    closeButton.addEventListener('click' , () => {
-      this.close();
-    })
-    if (shouldCloseOverlay) {
-      this.overlay.addEventListener('click', () => {
-        if(this.isOpen()) {
-          this.close();
-        }
-      })
+    if (this.shouldCloseOverlay) {
+     this.overlay.addEventListener('click', this.handleOverlayClick);
     }
-  }
-  addOverlayListener() {
-    this.overlay.addEventListener('click', () => {
-      this.close();
-    })
+   
   }
 
   open() {
@@ -40,27 +41,22 @@ export default class Modal {
     });
     this.modal.classList.add('modal-showed')
     this.overlay.classList.add('overlay-showed')
-  };
+
+    this.#initClose();
+  }
+
   close() {
+    if(this.shouldCloseOverlay) {
+      this.overlay.removeEventListener('click', this.handleOverlayClick);
+    }
+
+    this.closeButton.removeEventListener('click', this.handleCloseClick);
     this.modal.classList.remove('modal-showed')
     this.overlay.classList.remove('overlay-showed')
-  };
-
+  }
+  
   isOpen() {
     return this.modal.classList.contains('modal-showed');
-  }
-
-  addOpenListener() {
-    this.openBtn.addEventListener('click', () => {
-      this.open()
-    })
-  }
-
-  addCloseListener() {
-    const closeBtn = this.modal.querySelector('.modal-close');
-    closeBtn.addEventListener('click', () => {
-      this.close();
-    });
   }
   
 };
