@@ -192,11 +192,23 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  padding: 30px;
-  background: white;
+
+  width: 440px;
+  max-width: calc(100% - 32px);
+  max-height: 90vh;
+  overflow-y: auto;
+
+  box-sizing: border-box;
+  padding: 32px;
+
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
 }
 
+.modal-showed {
+  display: block;
+}
 .modal-showed {
   display: block;
 }
@@ -218,4 +230,74 @@ body {
 #registration-form {
   display: flex;
   flex-direction: column;
+  gap: 5px ;
+}
+
+#registration-form input,
+#auth-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background-color: #f9fafb;
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#registration-form input:focus,
+#auth-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background-color: #fff;
+}
+
+#registration-form button[type="submit"],
+#auth-form button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #4f46e5;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#registration-form label,
+#auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background-color: #eeeeee;
 }

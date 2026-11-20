@@ -24,7 +24,8 @@
         Вывести сообщение в консоль лог
       </button>
       <button id="change-color-btn">Сменить цвет кнопки</button>
-      <button class="rgn-btn">Регистрация</button>
+      <button id="registration-btn" class="rgn-btn">Регистрация</button>
+      <button id="auth-btn">Аутентификация</button>
 
       <ul id="products">
         <template id="product-card-template">
@@ -100,7 +101,7 @@
       <p class="footer-copyright">www.product-cards.com©all right reserve</p>
     </footer>
 
-    <div class="overlay"></div>
+    <div id="overlay" class="overlay"></div>
 
     <div id="registration-modal" class="modal">
       <form id="registration-form" novalidate>
@@ -159,6 +160,36 @@
           />
         </label>
         <button type="submit">Зарегистрироваться</button>
+      </form>
+
+      <button class="modal-close">x</button>
+    </div>
+
+    <div id="auth-modal" class="modal">
+      <form id="auth-form">
+        <label>
+          Логин
+          <input
+            id="auth-login"
+            name="login"
+            type="text"
+            required
+            placeholder="Введите логин..."
+          />
+        </label>
+
+        <label>
+          Пароль
+          <input
+            id="auth-password"
+            name="password"
+            type="password"
+            required
+            placeholder="Введите пароль..."
+          />
+        </label>
+
+        <button type="submit">Войти</button>
       </form>
 
       <button class="modal-close">x</button>
