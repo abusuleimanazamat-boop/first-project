@@ -46,7 +46,7 @@ export default class Modal {
   }
 
   close() {
-    if(this.shouldCloseOverlay) {
+    if (this.shouldCloseOverlay) {
       this.overlay.removeEventListener('click', this.handleOverlayClick);
     }
 
